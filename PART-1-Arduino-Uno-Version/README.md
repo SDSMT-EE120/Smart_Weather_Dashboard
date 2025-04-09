@@ -42,9 +42,9 @@ The point of this assignment is not to learn how to code in C.  I have provided
 
 Your part is to create the logic of
 
-1. When the temperature is above 30°C turn the LED on 
+1. When the temperature is above 30°C, turn the LED on 
 
-2. Displays the temperature on the display 
+2. Displaying the temperature on the LCD 
 
 3. Convert sensor data to a Value. 
 
@@ -57,7 +57,7 @@ Add to Classes, EE120, Smart Weather Dashboard
 
 ## Helpers 
 
-When reading from an analog sensor using a microcontroller, the sensor provides a voltage signal that is interpreted by the microcontroller's analog-to-digital converter (ADC). Most microcontrollers use a 10-bit ADC, which converts the analog voltage into a digital value ranging from 0 to 1023. This value is a representation of the input voltage relative to the reference voltage of the system (usually 5V or 3.3V, depending on the microcontroller).
+When reading from an analog sensor using a microcontroller, the sensor provides a voltage signal that is interpreted by the microcontroller's analog-to-digital converter (ADC). The Atmel 328P on the Arduino Uno uses a 10-bit ADC, which converts the analog voltage into a digital value ranging from 0 to 1023. This value is a representation of the input voltage relative to the reference voltage of the system (usually 5V or 3.3V, depending on the microcontroller).
 
 To calculate the actual voltage output from the sensor, use the following equation:
 
@@ -67,7 +67,7 @@ Where
 
 - Sensor_Value is the raw analog reading from the microcontroller (0 to 1023)
 
-- V_ref is the reference voltage of the ADC (commonly 5.0V)
+- V_ref is the reference voltage of the ADC (5.0V for the Uno)
 
 - V is the calculated voltage from the sensor
 
