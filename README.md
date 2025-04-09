@@ -20,10 +20,16 @@ Create a simple "Smart Weather Dashboard" that reads a temperature sensor, displ
 
 ## What It Demonstrates: 
 
-| Feature          | Arduino Uno (Simulaion)        | ESP32-S3 Fether (Hardware)     |
+| Feature          | Arduino Uno (Simulation)        | ESP32-S3 Fether (Hardware)     |
 |------------------|--------------------------------|--------------------------------|
 | LED Control      | Basic on/off using digital pin | Using board LED                |
 | Display          | External I2C LCD 16x2          | Onboard TFT with graphics/text |
 | Input            | Simulated Temperature Sensor   | Real sensor or Potentiometer   |
 | I/O Capacity     | More GPIO                      | Limited Pins                   |
 | UX/UI Potential  | Minimal (Text-only)            | Graphical (draw icons, colors) |
+
+## PART 1: Arduino Uno Version (Simulation)
+Click Here 
+
+## PART 2: ESP32-S3 Feather Version (Hardware)
+Comming Soon 
