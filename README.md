@@ -35,3 +35,4 @@ Create a simple "Smart Weather Dashboard" that reads a temperature sensor, displ
 Comming Soon 
 
 ## Part 3: Notes and Takeaways (D2L)
+Go to D2L and make a post in the Discussion board "Smart Weather Dashboard".  To receive credit, have a TA or Professor read and review your post to receive full credit. (10 PT)
