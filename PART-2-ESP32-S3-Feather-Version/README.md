@@ -63,7 +63,7 @@ Your part is to create the logic of
 
 ## Deliverables for Part 1
 
-Demonstrate to the TA of Professor the system working.
+Demonstrate to the TA of Professor the system working. (10 PT)
 
 Turn your Microcontroller into the bin at the front of the class to be wiped.
 
