@@ -11,3 +11,24 @@ Open ArduinoIDE and make sure you completed setup in [Part0](https://github.com/
 - Temperature Sensor [Datasheet]()
 
 - Various Wires 
+
+## Building 
+
+Comming Soon 
+
+## Functionality
+
+- Reads the Temperature sensor value 
+
+- Convert to °C (Review Helpers at the bottom)
+
+- Turns on LED if Temp > 30°C
+
+- Display temperature on TFT screen with graphical icons, color, etc
+
+### TFT Screen Display Functionality
+
+- Change color when Temp > 30°C
+
+- Display warning in red when too hot
+
