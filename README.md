@@ -33,3 +33,5 @@ Create a simple "Smart Weather Dashboard" that reads a temperature sensor, displ
 
 ## PART 2: ESP32-S3 Feather Version (Hardware)
 Comming Soon 
+
+## Part 3: Notes and Takeaways (D2L)
