@@ -31,7 +31,7 @@ In the search box enter the following and click install.
 
 ## Building 
 
-Comming Soon 
+Coming Soon 
 
 ## Functionality
 
@@ -66,3 +66,6 @@ Your part is to create the logic of
 Demonstrate to the TA of Professor the system working.
 
 Turn your Microcontroller into the bin at the front of the class to be wiped.
+
+## Helpers 
+Coming Soon 
