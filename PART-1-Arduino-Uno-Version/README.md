@@ -46,6 +46,8 @@ Your part is to create the logic of
 
 2. Displays the tempature on the display 
 
+3. Convert sensor data to a Value. 
+
 ## Deliverables for Part 1
 
 Demonstrate to the TA of Professor the system working.
