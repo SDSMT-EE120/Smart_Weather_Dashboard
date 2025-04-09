@@ -22,13 +22,13 @@ Open TinkerCAD and create a project.
 
 ## Building 
 
-Using the componets above create the circuit below. To receive full credit your circuit should look identical to the design below.
+Using the components above create the circuit below. To receive full credit your circuit should look identical to the design below.
 
 ![TinkerCad Circuit](/PART-1-Arduino-Uno-Version/assets/images/Tinkercad_Circuit.png)
 
 ## Functionality: 
 
-- Reads temperature form TMP36
+- Reads temperature from TMP36
 
 - Convert to °C (Review Helpers at the bottom)
 
@@ -38,19 +38,19 @@ Using the componets above create the circuit below. To receive full credit your 
 
 ## Code: 
 
-As the point of this assignment is not to learn how to code in C.  I have provided the code for writing to and using the LCD display.  Before implementing your part, you should review this code and understand how it works.  
+The point of this assignment is not to learn how to code in C.  I have provided the code for writing to and using the LCD display.  Before implementing your part, you should review this code and understand how it works.  
 
 Your part is to create the logic of
 
-1. When tempature is above 30°C turns LED on 
+1. When the temperature is above 30°C turn the LED on 
 
-2. Displays the tempature on the display 
+2. Displays the temperature on the display 
 
 3. Convert sensor data to a Value. 
 
 ## Deliverables for Part 1
 
-Demonstrate to the TA of Professor the system working.
+Demonstrate to the TA or the Professor the system working.
 
 Add to Classes, EE120, Smart Weather Dashboard
 
@@ -61,7 +61,7 @@ When reading from an analog sensor using a microcontroller, the sensor provides 
 
 To calculate the actual voltage output from the sensor, use the following equation:
 
-    V = Sensor_Value * (V_ref / 1023.0)
+ V = Sensor_Value * (V_ref / 1023.0)
 
 Where 
 
@@ -71,9 +71,9 @@ Where
 
 - V is the calculated voltage from the sensor
 
-The analog sensor outputs 0.5V at 0°C and increases linearly at 10 mV/°C, you can convert the voltage to temperature using:
+The analog sensor outputs 0.5V at 0°C and increases linearly at 10 mV/°C, you can convert the voltage to temperature using the:
 
-    C = (V - 0.5) * 100
+ C = (V - 0.5) * 100
 
 Where 
 
