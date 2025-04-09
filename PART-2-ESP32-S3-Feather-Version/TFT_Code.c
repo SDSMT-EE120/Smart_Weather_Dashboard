@@ -1,0 +1,95 @@
+#include <Adafruit_GFX.h>
+#include <Adafruit_ST7789.h>
+#include <Adafruit_NeoPixel.h>
+
+
+// TFT display setup (No CS pin needed for Feather TFT)
+Adafruit_ST7789 tft = Adafruit_ST7789(TFT_CS, TFT_DC, TFT_RST);
+
+//Define Global Variables 
+
+
+void setup() 
+{
+    pinMode(TFT_BACKLITE, OUTPUT);   // TFT backlight control
+    pinMode(TFT_I2C_POWER, OUTPUT);  // Power supply control for TFT/I2C
+
+    setup_TFT();                     // Initialize TFT display
+
+    // Draw initial graphics on TFT
+    drawThermometerIcon();
+
+    // NeoPixel setup
+    pinMode(LED_BUILTIN, OUTPUT);
+    digitalWrite(LED_BUILTIN, LOW);
+}
+
+void loop()
+{
+    // Insert code to read the potentiometer value and convert it to temperature
+
+
+    // Insert code to update the LED
+
+    // Clear screen section and redraw thermometer
+    tft.fillScreen(ST77XX_BLACK);
+    drawThermometerIcon();
+
+    // Insert code to update the TFT display with the temperature value
+
+    // Refresh every 500ms
+    delay(500);
+}
+
+// Function to draw a simple thermometer icon on the TFT screen
+void drawThermometerIcon() {
+    tft.fillRect(20, 50, 40, 80, ST77XX_BLUE); // Thermometer body
+    tft.fillRect(30, 45, 20, 10, ST77XX_BLUE); // Top
+    tft.fillRect(30, 130, 20, 10, ST77XX_BLUE); // Bottom
+}
+
+void changeThermometerColor(float temp) {
+    uint16_t color;
+    if (temp >= 30) {
+        color = ST77XX_RED;
+    }
+    else if (temp >= 20) {
+        color = ST77XX_YELLOW;
+    }
+    else {
+        color = ST77XX_BLUE;
+    }
+    tft.fillRect(20, 50, 40, 80, color); // Change thermometer color
+}
+
+// Function to set up the TFT display
+void setup_TFT()
+{
+    // turn on backlite
+    digitalWrite(TFT_BACKLITE, HIGH);
+
+    // turn on the TFT / I2C power supply
+    digitalWrite(TFT_I2C_POWER, HIGH);
+    delay(10);
+
+    tft.init(135, 240); // Init ST7789 240x135
+    tft.setRotation(3);
+    tft.fillScreen(ST77XX_BLACK);
+
+    Serial.println(F("Initialized"));
+
+    tft.fillScreen(ST77XX_BLACK);
+    drawtext(
+        "System Ready!, Init test now.  Please wait.",
+        ST77XX_WHITE);
+    delay(1000);
+}
+
+// Function to draw text on the TFT display
+void drawtext(char* text, uint16_t color) {
+    tft.setCursor(0, 0);
+    tft.setTextSize(2);
+    tft.setTextColor(color);
+    tft.setTextWrap(true);
+    tft.print(text);
+}
