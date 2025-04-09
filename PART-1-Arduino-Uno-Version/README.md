@@ -46,4 +46,5 @@ Your part is to create the logic of
 ## Deliverables for Part 1
 
 Demonstate to TA of Professor the system working. 
+
 Add to Classes, EE120, Smart Weather Dashboard
