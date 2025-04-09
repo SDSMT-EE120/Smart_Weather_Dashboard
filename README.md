@@ -29,7 +29,7 @@ Create a simple "Smart Weather Dashboard" that reads a temperature sensor, displ
 | UX/UI Potential  | Minimal (Text-only)            | Graphical (draw icons, colors) |
 
 ## PART 1: Arduino Uno Version (Simulation)
-[Click Here]() 
+[Click Here](https://github.com/SDSMT-EE120/Smart_Weather_Dashboard/tree/main/PART-1-Arduino-Uno-Version) 
 
 ## PART 2: ESP32-S3 Feather Version (Hardware)
 Comming Soon 
