@@ -26,4 +26,19 @@ Using the componets above create the circuit below. To receive full credit your 
 
 ![TinkerCad Circuit](/PART-1-Arduino-Uno-Version/assets/images/Tinkercad_Circuit.png)
 
+## Functionality: 
 
+- Reads temperature form TMP36
+
+- Turns on LED if temp > 30°C
+
+- Display temperature on external LCD 
+
+## Code: 
+
+As the point of this assignment is not to learn how to code in C.  I have provided the code for writing to and using the LCD display.  You should review this code and understand how it works before implmenting you part.  
+Your part is to create the logic of 
+
+1. When tempature is above 30°C turns LED on 
+
+2. Displays the tempature on the display 
