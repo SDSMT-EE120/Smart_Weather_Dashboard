@@ -57,6 +57,10 @@ Add to Classes, EE120, Smart Weather Dashboard
 
 ## Helpers 
 
+[Programming Guide](https://docs.arduino.cc/programming/) - Can find important Libraries and more. 
+
+[Language Reference](https://docs.arduino.cc/language-reference/) -Can find important functions like pinMode() and the read/write functions.
+
 When reading from an analog sensor using a microcontroller, the sensor provides a voltage signal that is interpreted by the microcontroller's analog-to-digital converter (ADC). Most microcontrollers use a 10-bit ADC, which converts the analog voltage into a digital value ranging from 0 to 1023. This value is a representation of the input voltage relative to the reference voltage of the system (usually 5V or 3.3V, depending on the microcontroller).
 
 To calculate the actual voltage output from the sensor, use the following equation:
