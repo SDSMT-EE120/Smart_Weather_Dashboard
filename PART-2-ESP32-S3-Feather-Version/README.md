@@ -39,15 +39,21 @@ Connect output pin of Temp Sensor to any analog of the Fether.  Connect to power
 
 - Convert to °C (Review Helpers at the bottom)
 
-- Turns on LED if Temp > 30°C
+- Turns on LED if Temp > 25°C
 
 - Display temperature on TFT screen with graphical icons, color, etc
 
 ### TFT Screen Display Functionality
 
-- Change color when Temp > 30°C
+- Change text color when Temp > 25°C
 
-- Display warning in red when too hot
+- Change graphical color for the following 
+
+1. Less then 21°C Graphic is Blue 
+
+2. Between 21°C and 25 °C Graphic is Yellow 
+
+3. Over 25°C Graphic is Red 
 
 ## Code: 
 
@@ -55,15 +61,15 @@ The point of this assignment is not to learn how to code in C.  I have provided
 
 Your part is to create the logic of
 
-1. When the temperature is above 30°C turn the LED on 
+1. When the temperature is above 25°C turn the LED on 
 
-2. Displays the temperature on the display 
+2. Displays the temperature on the display and TFT
 
 3. Convert sensor data to a Value. 
 
 ## Deliverables for Part 1
 
-Demonstrate to the TA or the Professor the system working. (10 PT)
+Demonstrate to the TA or the Professor the system working. (20 PT)
 
 Turn your Microcontroller into the bin at the front of the class to be wiped.
 
