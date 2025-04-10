@@ -25,13 +25,13 @@ In the search box enter the following and click install.
 
 - 1x Adafruit ESP32-S3 REV TFT
 
-- Temperature Sensor [Datasheet]()
+- Temperature Sensor [Datasheet](https://cdn-learn.adafruit.com/downloads/pdf/tmp36-temperature-sensor.pdf)
 
 - Various Wires 
 
 ## Building 
 
-Coming Soon 
+Connect output pin of Temp Sensor to any analog of the Fether.  Connect to power and ground based off the Datasheet above. 
 
 ## Functionality
 
@@ -77,13 +77,13 @@ When reading from an analog sensor using a microcontroller, the sensor provides 
 
 To calculate the actual voltage output from the sensor, use the following equation:
 
-    V = Sensor_Value * (V_ref / 1023.0)
+    V = Sensor_Value * (V_ref / 4096.0)
 
 Where 
 
-- Sensor_Value is the raw analog reading from the microcontroller (0 to 1023)
+- Sensor_Value is the raw analog reading from the microcontroller (0 to 4096)
 
-- V_ref is the reference voltage of the ADC (commonly 5.0V)
+- V_ref is the reference voltage of the ADC (3.3 Volt)
 
 - V is the calculated voltage from the sensor
 
