@@ -42,9 +42,9 @@ The point of this assignment is not to learn how to code in C.  I have provided
 
 Your part is to create the logic of
 
-1. When the temperature is above 30°C turn the LED on 
+1. When the temperature is above 30°C, turn the LED on 
 
-2. Displays the temperature on the display 
+2. Displaying the temperature on the LCD 
 
 3. Convert sensor data to a Value. 
 
@@ -71,7 +71,7 @@ Where
 
 - Sensor_Value is the raw analog reading from the microcontroller (0 to 1023)
 
-- V_ref is the reference voltage of the ADC (commonly 5.0V)
+- V_ref is the reference voltage of the ADC (5.0V for the Uno)
 
 - V is the calculated voltage from the sensor
 
