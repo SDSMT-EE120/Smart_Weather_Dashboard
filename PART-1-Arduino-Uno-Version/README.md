@@ -12,7 +12,7 @@ Open TinkerCAD and create a project.
 
 - 1 x LED 
 
-- 2 x 220 Ω resistor
+- 1 x 220 Ω resistor
 
 - 1 x 16x2 LCD Display (NOT I2C)
 
