@@ -52,7 +52,7 @@ Your part is to create the logic of
 
 Demonstrate to the TA or the Professor the system working. (10 Pt)
 
-Add to Classes, EE120, Smart Weather Dashboard
+In TinkerCAD add to Classes, EE120, Smart Weather Dashboard
 
 
 ## Helpers 
