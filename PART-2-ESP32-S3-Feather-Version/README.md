@@ -68,4 +68,35 @@ Demonstrate to the TA or the Professor the system working. (10 PT)
 Turn your Microcontroller into the bin at the front of the class to be wiped.
 
 ## Helpers 
-Coming Soon 
+
+[TFT Documentation](https://learn.adafruit.com/esp32-s3-reverse-tft-feather/built-in-tft)
+
+[Pins and Use](https://learn.adafruit.com/esp32-s3-reverse-tft-feather/pinouts)
+
+When reading from an analog sensor using a microcontroller, the sensor provides a voltage signal that is interpreted by the microcontroller's analog-to-digital converter (ADC). Most microcontrollers use a 10-bit ADC, which converts the analog voltage into a digital value ranging from 0 to 1023. This value is a representation of the input voltage relative to the reference voltage of the system (usually 5V or 3.3V, depending on the microcontroller).
+
+To calculate the actual voltage output from the sensor, use the following equation:
+
+    V = Sensor_Value * (V_ref / 1023.0)
+
+Where 
+
+- Sensor_Value is the raw analog reading from the microcontroller (0 to 1023)
+
+- V_ref is the reference voltage of the ADC (commonly 5.0V)
+
+- V is the calculated voltage from the sensor
+
+The analog sensor outputs 0.5V at 0°C and increases linearly at 10 mV/°C, you can convert the voltage to temperature using the:
+
+    C = (V - 0.5) * 100
+
+Where 
+
+- V is the voltage calculated from the previous step
+
+- 0.5 is the voltage offset corresponding to 0°C
+
+- 100 scales the voltage change to °C (since 10 mV/°C = 0.01 V/°C, and 1 / 0.01 = 100)
+
+This will yield the temperature in degrees Celsius.
