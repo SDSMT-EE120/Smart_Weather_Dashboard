@@ -12,7 +12,7 @@ Create a simple "Smart Weather Dashboard" that reads a temperature sensor, displ
 
 - Understand GPIO limitations and pin mapping
 
-- Compare external display wiring (LCD via I2C) vs onboard TFT
+- Compare external display wiring LCD  vs onboard TFT
 
 - Demonstrate input/output control (LED + sensor)
 
@@ -20,10 +20,10 @@ Create a simple "Smart Weather Dashboard" that reads a temperature sensor, displ
 
 ## What It Demonstrates: 
 
-| Feature          | Arduino Uno (Simulation)        | ESP32-S3 Fether (Hardware)     |
+| Feature          | Arduino Uno (Simulation)       | ESP32-S3 Fether (Hardware)     |
 |------------------|--------------------------------|--------------------------------|
 | LED Control      | Basic on/off using digital pin | Using board LED                |
-| Display          | External I2C LCD 16x2          | Onboard TFT with graphics/text |
+| Display          | External LCD 16x2              | Onboard TFT with graphics/text |
 | Input            | Simulated Temperature Sensor   | Real sensor or Potentiometer   |
 | I/O Capacity     | More GPIO                      | Limited Pins                   |
 | UX/UI Potential  | Minimal (Text-only)            | Graphical (draw icons, colors) |

@@ -8,7 +8,6 @@ Adafruit_ST7789 tft = Adafruit_ST7789(TFT_CS, TFT_DC, TFT_RST);
 
 //Define Global Variables 
 
-
 void setup() 
 {
     pinMode(TFT_BACKLITE, OUTPUT);   // TFT backlight control
@@ -35,10 +34,13 @@ void loop()
     tft.fillScreen(ST77XX_BLACK);
     drawThermometerIcon();
 
-    // Insert code to update the TFT display with the temperature value
+    // Insert code to update the TFT display with the temperature value and change Thermometer Color
+
+    char tempBuffer[10];
+    dtostrf(tempC, 4, 1, tempBuffer); // Convert float to string
 
     // Refresh every 500ms
-    delay(500);
+    delay(1000);
 }
 
 // Function to draw a simple thermometer icon on the TFT screen
@@ -79,15 +81,14 @@ void setup_TFT()
     Serial.println(F("Initialized"));
 
     tft.fillScreen(ST77XX_BLACK);
-    drawtext(
-        "System Ready!, Init test now.  Please wait.",
-        ST77XX_WHITE);
+    
     delay(1000);
 }
 
 // Function to draw text on the TFT display
-void drawtext(char* text, uint16_t color) {
-    tft.setCursor(0, 0);
+void drawtext(const char* text, int x, int y, uint16_t color) 
+{
+    tft.setCursor(x, y);
     tft.setTextSize(2);
     tft.setTextColor(color);
     tft.setTextWrap(true);
