@@ -25,16 +25,16 @@ void setup()
 
 void loop()
 {
-    // Insert code to read the potentiometer value and convert it to temperature
+    // TODO: Insert code to read the incoming analog temperature value and convert it to floating point temperature value
 
 
-    // Insert code to update the LED
+    // TODO: Insert logic to update the LED
 
     // Clear screen section and redraw thermometer
     tft.fillScreen(ST77XX_BLACK);
     drawThermometerIcon();
 
-    // Insert code to update the TFT display with the temperature value and change Thermometer Color
+    // TODO: Insert code to update the TFT display with the temperature value and change ThermometerIcon color
 
     char tempBuffer[10];
     dtostrf(tempC, 4, 1, tempBuffer); // Convert float to string
