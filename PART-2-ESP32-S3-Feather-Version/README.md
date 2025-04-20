@@ -31,45 +31,35 @@ In the search box enter the following and click install.
 
 ## Building 
 
-Connect output pin of Temp Sensor to any analog of the Fether.  Connect to power and ground based off the Datasheet above. 
+Connect output pin of Temp Sensor to any analog input of the Feather.  Connect to power and ground based off the Datasheet above. 
 
 ## Functionality
 
-- Reads the Temperature sensor value 
+- Reads the temperature sensor value 
 
-- Convert to °C (Review Helpers at the bottom)
+- Convert to °C (review Helpers at the bottom)
 
-- Turns on LED if Temp > 25°C
+- Turns on LED if the measured temperature > 25°C
 
-- Display temperature on TFT screen with graphical icons, color, etc
+- Change temperature text color to red if Temp > 25°C
 
-### TFT Screen Display Functionality
-
-- Change text color when Temp > 25°C
-
-- Change graphical color for the following 
-
-1. Less then 21°C Graphic is Blue 
-
-2. Between 21°C and 25 °C Graphic is Yellow 
-
-3. Over 25°C Graphic is Red 
+- Change thermometer icon graphic color to
+    - **Blue** if the temperature is less than 21°C
+    - **Yellow** if the temperature is between 21°C and 25 °C
+    - **Red** if the temperature is over 25°C graphic is red 
 
 ## Code: 
 
-The point of this assignment is not to learn how to code in C.  I have provided the code for writing to and using the TFT display.  Before implementing your part, you should review this code and understand how it works.  
+The point of this assignment is not to learn how to code in C.  Starter code for writing to and using the TFT display is provided in [TFT_Code.c](https://github.com/SDSMT-EE120/Smart_Weather_Dashboard/blob/main/PART-2-ESP32-S3-Feather-Version/TFT_Code.c). Your job is to find the approrpiate sections of code (look for TODO comments) and create the logic to:
 
-Your part is to create the logic of
+1. Convert the incoming sensor data voltage to an integer value. 
+2. When the temperature is above 25°C turn the LED on 
+3. Update the temperature and the icon color on the TFT display
 
-1. When the temperature is above 25°C turn the LED on 
-
-2. Displays the temperature on the display and TFT
-
-3. Convert sensor data to a Value. 
 
 ## Deliverables for Part 1
 
-Demonstrate to the TA or the Professor the system working. (20 PT)
+Demonstrate to the TA or the Professor the system working as described in the Functionality section. (20 PT)
 
 Turn your Microcontroller into the bin at the front of the class to be wiped.
 
@@ -79,7 +69,7 @@ Turn your Microcontroller into the bin at the front of the class to be wiped.
 
 [Pins and Use](https://learn.adafruit.com/esp32-s3-reverse-tft-feather/pinouts)
 
-When reading from an analog sensor using a microcontroller, the sensor provides a voltage signal that is interpreted by the microcontroller's analog-to-digital converter (ADC). Most microcontrollers use a 10-bit ADC, which converts the analog voltage into a digital value ranging from 0 to 1023. This value is a representation of the input voltage relative to the reference voltage of the system (usually 5V or 3.3V, depending on the microcontroller).
+When reading from an analog sensor using a microcontroller, the sensor provides a voltage signal that is interpreted by the microcontroller's analog-to-digital converter (ADC). ADCs are specified by the number of bits they output. An n-bit ADC converts the analog voltage into a digital integer ranging from 0 to 10^n. This value is a representation of the input voltage relative to the reference voltage of the system (usually 5V or 3.3V, depending on the microcontroller).
 
 To calculate the actual voltage output from the sensor, use the following equation:
 
@@ -87,22 +77,18 @@ To calculate the actual voltage output from the sensor, use the following equati
 
 Where 
 
-- Sensor_Value is the raw analog reading from the microcontroller (0 to 4096)
-
+- Sensor_Value is the raw integer reading from the microcontroller's 12-bit ADC (0 to 4096)
 - V_ref is the reference voltage of the ADC (3.3 Volt)
-
 - V is the calculated voltage from the sensor
 
-The analog sensor outputs 0.5V at 0°C and increases linearly at 10 mV/°C, you can convert the voltage to temperature using the:
+The analog sensor outputs 0.5V at 0°C and increases linearly at 10 mV/°C, so you can convert the voltage to temperature using this equation:
 
     C = (V - 0.5) * 100
 
 Where 
 
 - V is the voltage calculated from the previous step
-
 - 0.5 is the voltage offset corresponding to 0°C
-
 - 100 scales the voltage change to °C (since 10 mV/°C = 0.01 V/°C, and 1 / 0.01 = 100)
 
 This will yield the temperature in degrees Celsius.
